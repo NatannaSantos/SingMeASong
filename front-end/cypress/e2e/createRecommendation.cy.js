@@ -1,15 +1,43 @@
-import {faker} from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 
-describe("Create Recommendation",()=>{
-    it("should create a recommendation given valid input", ()=>{
+describe("Create Recommendation", () => {
+    before(() => {
+        cy.request("POST", "http://localhost:5000/reset", {});
+    });
+    it("should create a recommendation given valid input", () => {
         const recommendation = {
             name: faker.lorem.words(2),
-            youtubeLink:"https://www.youtube.com/watch?v=kgx4WGK0oNU"
+            youtubeLink: "https://www.youtube.com/watch?v=kgx4WGK0oNU"
         };
 
         cy.visit("http://localhost:3000");
 
         cy.get('input[placeholder="Name"]').type(recommendation.name);
         cy.get('input[placeholder="https://youtu.be/..."]').type(recommendation.youtubeLink);
+
+        cy.intercept("POST", "http://localhost:5000/recommendations").as("createRecommendation");
+
+        cy.get("button").click();
+
+        cy.wait("@createRecommendation");
+
+        cy.contains(recommendation.name);
     });
+
+    it("should increase the vote count", () => {
+
+        cy.get('article svg:first').click();
+
+        cy.contains('1');
+
+    });
+
+    it('should decrease the vote count', () => {
+        cy.get('article svg:last').click();
+
+        cy.contains('0');
+    });
+
+
 });
+
