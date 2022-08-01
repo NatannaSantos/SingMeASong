@@ -38,6 +38,5 @@ describe("Create Recommendation", () => {
         cy.contains('0');
     });
 
-
 });
 
