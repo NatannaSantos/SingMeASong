@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659378988586" clover="3.2.0">
-  <project timestamp="1659378988586" name="All files">
-    <metrics statements="104" coveredstatements="36" conditionals="30" coveredconditionals="1" methods="34" coveredmethods="6" elements="168" coveredelements="43" complexity="0" loc="104" ncloc="104" packages="8" files="11" classes="11"/>
+<coverage generated="1659380555063" clover="3.2.0">
+  <project timestamp="1659380555064" name="All files">
+    <metrics statements="104" coveredstatements="46" conditionals="30" coveredconditionals="1" methods="34" coveredmethods="11" elements="168" coveredelements="58" complexity="0" loc="104" ncloc="104" packages="8" files="11" classes="11"/>
     <package name="src">
       <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <file name="app.ts" path="/home/natanna/Projetos/projeto21-singmeasong/back-end/src/app.ts">
@@ -22,22 +22,22 @@
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="24" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="1"/>
+      <metrics statements="24" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="8" coveredmethods="2"/>
       <file name="e2eController.ts" path="/home/natanna/Projetos/projeto21-singmeasong/back-end/src/controllers/e2eController.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
       </file>
       <file name="recommendationController.ts" path="/home/natanna/Projetos/projeto21-singmeasong/back-end/src/controllers/recommendationController.ts">
-        <metrics statements="22" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="7" coveredmethods="1"/>
+        <metrics statements="22" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="7" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="9" count="0" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
@@ -65,9 +65,9 @@
       </file>
     </package>
     <package name="src.repositories">
-      <metrics statements="13" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="3"/>
+      <metrics statements="13" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="5"/>
       <file name="recommendationRepository.ts" path="/home/natanna/Projetos/projeto21-singmeasong/back-end/src/repositories/recommendationRepository.ts">
-        <metrics statements="13" coveredstatements="4" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="3"/>
+        <metrics statements="13" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="9" coveredmethods="5"/>
         <line num="6" count="1" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
@@ -75,11 +75,11 @@
         <line num="36" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="38" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
         <line num="76" count="1" type="stmt"/>
       </file>
     </package>
@@ -111,22 +111,22 @@
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="31" coveredstatements="5" conditionals="6" coveredconditionals="0" methods="10" coveredmethods="2"/>
+      <metrics statements="31" coveredstatements="10" conditionals="6" coveredconditionals="0" methods="10" coveredmethods="4"/>
       <file name="recommendationsService.ts" path="/home/natanna/Projetos/projeto21-singmeasong/back-end/src/services/recommendationsService.ts">
-        <metrics statements="31" coveredstatements="5" conditionals="6" coveredconditionals="0" methods="10" coveredmethods="2"/>
+        <metrics statements="31" coveredstatements="10" conditionals="6" coveredconditionals="0" methods="10" coveredmethods="4"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="31" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
@@ -143,7 +143,7 @@
         <line num="78" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="79" count="0" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
-        <line num="86" count="1" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
         <line num="89" count="1" type="stmt"/>
       </file>
     </package>

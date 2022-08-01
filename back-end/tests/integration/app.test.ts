@@ -28,4 +28,23 @@ describe("performing integration tests",()=>{
     expect(response.status).toEqual(201);
     expect(createRecommendation).not.toBeNull();
     })
+
+    it("should persist the upvote of a recommendation given it exists", async ()=>{
+        const recommendation: CreateRecommendationData = {
+            name: faker.lorem.words(2),
+            youtubeLink: "https://www.youtube.com/watch?v=kgx4WGK0oNU"
+        };
+
+    const createdRecommendation = await prisma.recommendation.create({
+        data:recommendation
+    })
+    const response = await supertest(app).post(`/recommendations/${createdRecommendation.id}/upvote`);
+    const updatedRecommendation = await prisma.recommendation.findUnique({
+        where:{
+            name:createdRecommendation.name
+        }
+    })
+    expect(response.status).toEqual(200);
+    expect(createdRecommendation.score+1).toEqual(updatedRecommendation.score);
+    })
 })
