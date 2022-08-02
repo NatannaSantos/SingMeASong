@@ -3,6 +3,7 @@ import supertest from "supertest";
 import app from "../../src/app.js";
 import { prisma } from "../../src/database.js";
 import { CreateRecommendationData, recommendationService } from "../../src/services/recommendationsService.js";
+import recommendationBodyFactory from "../factories/recommendationBodyFactory.js";
 
 describe("performing integration tests",()=>{
     beforeEach(async ()=>{
@@ -13,10 +14,7 @@ describe("performing integration tests",()=>{
         await prisma.$disconnect();
     })
     it("should persist a recommendation given a valid body", async ()=>{
-        const recommendation: CreateRecommendationData = {
-            name: faker.lorem.words(2),
-            youtubeLink: "https://www.youtube.com/watch?v=kgx4WGK0oNU"
-        };
+        const recommendation = recommendationBodyFactory();
 
     const response = await supertest(app).post("/recommendations").send(recommendation);
 
@@ -30,10 +28,7 @@ describe("performing integration tests",()=>{
     })
 
     it("should persist the upvote of a recommendation given it exists", async ()=>{
-        const recommendation: CreateRecommendationData = {
-            name: faker.lorem.words(2),
-            youtubeLink: "https://www.youtube.com/watch?v=kgx4WGK0oNU"
-        };
+        const recommendation = recommendationBodyFactory();
 
     const createdRecommendation = await prisma.recommendation.create({
         data:recommendation

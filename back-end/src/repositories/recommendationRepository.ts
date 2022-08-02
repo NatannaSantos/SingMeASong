@@ -72,6 +72,12 @@ async function remove(id: number) {
 async function truncate(){
   await prisma.$executeRaw`TRUNCATE TABLE recommendations`;
 }
+async function seed(){
+  await prisma.recommendation.create({
+    data:{ name: "recomendação",
+           youtubeLink: "https://www.youtube.com/watch?v=kgx4WGK0oNU" }
+  });
+}
 
 export const recommendationRepository = {
   create,
@@ -81,5 +87,6 @@ export const recommendationRepository = {
   updateScore,
   getAmountByScore,
   remove,
-  truncate
+  truncate,
+  seed
 };

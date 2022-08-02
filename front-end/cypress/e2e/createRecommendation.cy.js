@@ -24,19 +24,19 @@ describe("Create Recommendation", () => {
         cy.contains(recommendation.name);
     });
 
-    it("should increase the vote count", () => {
+    // it("should increase the vote count", () => {
 
-        cy.get('article svg:first').click();
+    //     cy.get('article svg:first').click();
 
-        cy.contains('1');
+    //     cy.contains('1');
 
-    });
+    // });
 
-    it('should decrease the vote count', () => {
-        cy.get('article svg:last').click();
+    // it('should decrease the vote count', () => {
+    //     cy.get('article svg:last').click();
 
-        cy.contains('0');
-    });
+    //     cy.contains('0');
+    // });
 
 });
 

@@ -85,6 +85,9 @@ function getScoreFilter(random: number) {
 async function truncate(){
   return recommendationRepository.truncate();
 }
+async function seed(){
+  return recommendationRepository.seed();
+}
 
 export const recommendationService = {
   insert,
@@ -94,5 +97,6 @@ export const recommendationService = {
   get,
   getById: getByIdOrFail,
   getTop,
-  truncate
+  truncate,
+  seed
 };
