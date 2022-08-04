@@ -37,4 +37,15 @@ describe("recommendation service unit test",()=>{
 
 		expect(remove).toBeCalled();
 	});
+
+    it('should search for recommendations by id and throw error if not found', async () => {
+		const upvote = async() => await recommendationService.upvote(null);
+
+		expect(upvote()).rejects.toEqual({
+			message: '',
+			type: 'not_found'
+		})
+	});
+
+   
 });
